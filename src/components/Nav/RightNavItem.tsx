@@ -4,9 +4,9 @@ interface Props {
   setActiveTab: (tab: string) => void;
 }
 function RightNavItem({ tabName, activeTab, setActiveTab }: Props) {
-  const capitalizeFirstLetter = (str: string) => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  };
+  // const capitalizeFirstLetter = (str: string) => {
+  //   return str.charAt(0).toUpperCase() + str.slice(1);
+  // };
   return (
     <li className="nav-item">
       <a
@@ -14,7 +14,8 @@ function RightNavItem({ tabName, activeTab, setActiveTab }: Props) {
         onClick={() => setActiveTab(tabName)}
         style={{ cursor: "pointer", userSelect: "none" }}
       >
-        {capitalizeFirstLetter(tabName)}
+        {/* {capitalizeFirstLetter(tabName)} */}
+        {tabName}
       </a>
     </li>
   );

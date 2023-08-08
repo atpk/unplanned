@@ -1,3 +1,4 @@
+/* Dotted horizontal line */
 hr {
     border-style: none;
     border-top-style: dotted;
@@ -7,7 +8,14 @@ hr {
     margin:1rem auto;
   }
 
-  /* Add this to your CSS */
+/* Card in home */
+.card {
+    /* width: 300px; */
+    /* Center align the card horizontally on the screen */
+    margin: 0 auto;
+  }
+
+/* Background image in about us */
 .footer-bg {
     background-image: url('logo.jpeg'); /* Replace with your image path */
     background-size: cover;

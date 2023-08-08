@@ -7,14 +7,14 @@ import RightNavItem from "./components/Nav/RightNavItem";
 
 const App = () => {
   const logo = "/favicon.ico";
-  const [activeTab, setActiveTab] = useState("home");
+  const [activeTab, setActiveTab] = useState("Home");
   const renderTabContent = () => {
     switch (activeTab) {
-      case "home":
+      case "Home":
         return <Home />;
-      case "gallery":
+      case "Gallery":
         return <Gallery />;
-      case "about":
+      case "About":
         return <About />;
       // Add more cases for other options
       default:
@@ -39,49 +39,26 @@ const App = () => {
 
           {/* Right side content (options) */}
           <ul className="navbar-nav d-flex flex-row nav-underline">
-            <li className="nav-item">
-              <a
-                className={`nav-link ${activeTab === "home" ? "active" : ""}`}
-                onClick={() => setActiveTab("home")}
-                style={{ cursor: "pointer", userSelect: "none" }}
-              >
-                Home
-              </a>
-            </li>
             <RightNavItem
-              tabName={"newOne"}
+              tabName="Home"
               activeTab={activeTab}
               setActiveTab={setActiveTab}
             />
             <RightNavItem
-              tabName="gallery"
+              tabName="Gallery"
               activeTab={activeTab}
               setActiveTab={setActiveTab}
             />
-            {/* <li className="nav-item ms-3">
-              <a
-                className={`nav-link ${
-                  activeTab === "gallery" ? "active" : ""
-                }`}
-                onClick={() => setActiveTab("gallery")}
-                style={{ cursor: "pointer", userSelect: "none" }}
-              >
-                Gallery
-              </a>
-            </li> */}
-            <li className="nav-item ms-3">
-              <a
-                className={`nav-link ${activeTab === "about" ? "active" : ""}`}
-                onClick={() => setActiveTab("about")}
-                style={{ cursor: "pointer", userSelect: "none" }}
-              >
-                About
-              </a>
-            </li>
+            <RightNavItem
+              tabName="About"
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+            />
             {/* Add more options here */}
           </ul>
         </div>
       </nav>
+
       {/* Render the selected tab's content */}
       <div className="container mt-4">{renderTabContent()}</div>
 
