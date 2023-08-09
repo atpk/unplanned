@@ -3,12 +3,24 @@ import Home from "./Home";
 import Gallery from "./Gallery";
 import About from "./About";
 import Footer from "./components/Footer";
-import RightNavItem from "./components/Nav/RightNavItem";
+import RightNavItem from "./components/nav/RightNavItem";
+// import Testimonial from "./components/Testimonial";
+import ReviewPage from "./components/review/ReviewPage";
 
 const App = () => {
   const logo = "/favicon.ico";
   const [activeTab, setActiveTab] = useState("Home");
+
   const renderTabContent = () => {
+    // const testimonials = [
+    //   {
+    //     name: "John Doe",
+    //     content:
+    //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere sapien eget nibh egestas, ac luctus lorem euismod.",
+    //     avatar: "/images/5.jpg",
+    //   },
+    //   // Add more testimonials here
+    // ];
     switch (activeTab) {
       case "Home":
         return <Home />;
@@ -16,6 +28,9 @@ const App = () => {
         return <Gallery />;
       case "About":
         return <About />;
+      case "Testimonial":
+        return <ReviewPage />;
+      // return {testimonials.map((testimonial, index) => (<Testimonial key={index} {...testimonial}/>))};
       // Add more cases for other options
       default:
         return null; // Render nothing if no tab is selected
@@ -46,6 +61,11 @@ const App = () => {
             />
             <RightNavItem
               tabName="Gallery"
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+            />
+            <RightNavItem
+              tabName="Testimonial"
               activeTab={activeTab}
               setActiveTab={setActiveTab}
             />

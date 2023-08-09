@@ -7,13 +7,13 @@ interface Props {
 
 const ImageCard = ({ imageUrl, caption }: Props) => {
   const imageStyle = {
-    width: "20rem",
+    // width: "20rem",
     height: "10rem",
     borderRadius: "3%",
   };
-  const cardStyle = { width: "20rem" };
+  // const cardStyle = { width: "20rem" };
   return (
-    <div className="card border-0" style={cardStyle}>
+    <div className="card border-0">
       <img
         src={imageUrl}
         className="card-img-top"

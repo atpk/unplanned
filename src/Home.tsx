@@ -7,8 +7,7 @@ function Home() {
   const cardData = [
     {
       imageUrl: "/images/11.jpg",
-      caption:
-        "Image 1 Caption it said tha t asdfjsa fsadfijw klsd jsdoicawca ldkawd;o n",
+      caption: "Destination wedding",
     },
     {
       imageUrl: "/images/10.jpg",
@@ -47,7 +46,11 @@ function Home() {
     <>
       <VerticalSpace space="2px" />
       <Carousel />
-      <VerticalSpace space="5rem" />
+      <VerticalSpace space="3rem" />
+
+      <h2 style={{ marginBottom: "2rem", textAlign: "center" }}>
+        We plan your
+      </h2>
 
       <div className="container">
         <div className="row">

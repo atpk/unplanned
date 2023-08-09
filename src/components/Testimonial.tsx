@@ -4,6 +4,14 @@ interface Props {
   avatar: string;
 }
 const Testimonial = ({ name, content, avatar }: Props) => {
+  const contentStyle = { fontSize: "18px", marginBottom: "10px" };
+  const nameStyle = { fontSize: "16px", fontWeight: "bold" };
+  const imgStyle = {
+    width: "100px",
+    height: "100px",
+    borderRadius: "50%",
+    marginBottom: "10px",
+  };
   return (
     <div
       style={{
@@ -19,18 +27,9 @@ const Testimonial = ({ name, content, avatar }: Props) => {
         textAlign: "center",
       }}
     >
-      <img
-        src={avatar}
-        alt={name}
-        style={{
-          width: "100px",
-          height: "100px",
-          borderRadius: "50%",
-          marginBottom: "10px",
-        }}
-      />
-      <p style={{ fontSize: "18px", marginBottom: "10px" }}>{content}</p>
-      <strong style={{ fontSize: "16px", fontWeight: "bold" }}>{name}</strong>
+      <img src={avatar} alt={name} style={imgStyle} />
+      <p style={contentStyle}>{content}</p>
+      <strong style={nameStyle}>{name}</strong>
     </div>
   );
 };
