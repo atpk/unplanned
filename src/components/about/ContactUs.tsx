@@ -1,6 +1,8 @@
 import "./contactus.css";
 
 function ContactUs() {
+  const locationSrc =
+    "https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Lokmany%20nagar,%20Korochi,%20Ichalkaranji,%20Maharashtra%20416109+(Unplanned%20Events%20Planner)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed";
   return (
     <>
       <section className="contact_us">
@@ -95,7 +97,7 @@ function ContactUs() {
                 </p>
                 <div className="map_bind">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471220.5631094339!2d88.04952462217592!3d22.6757520733225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1596988408134!5m2!1sen!2sin"
+                    src={locationSrc}
                     width="100%"
                     height="450"
                     frameBorder={0}
@@ -116,3 +118,17 @@ function ContactUs() {
 }
 
 export default ContactUs;
+
+// <div style="width: 100%">
+//   <iframe
+//     width="100%"
+//     height="600"
+//     frameborder="0"
+//     scrolling="no"
+//     marginheight="0"
+//     marginwidth="0"
+//     src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Lokmany%20nagar,%20Korochi,%20Ichalkaranji,%20Maharashtra%20416109+(Unplanned%20Events%20Planner)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+//   >
+//     <a href="https://www.maps.ie/population/">Population calculator map</a>
+//   </iframe>
+// </div>;
